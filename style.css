@@ -68,3 +68,163 @@ header {
 .btn-ver-mas:hover {
     background-color: #c0392b;
 }
+/* Estilos para la Ventana Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Clase para ocultar el modal cuando no se use */
+.modal.oculto {
+    display: none;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+#cerrar-modal:hover {
+    color: #000;
+}
+
+.contenedor-mapa {
+    background-color: #eaeded;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: #555;
+}
+/* Estilos página de detalle */
+.contenedor-detalle {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-principal {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-principal img {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.datos-tienda {
+    flex: 1;
+}
+
+.btn-volver {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Botones de Redes Sociales */
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-social {
+    padding: 8px 14px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.whatsapp { background-color: #25d366; }
+.correo { background-color: #34495e; }
+.instagram { background-color: #e1306c; }
+.tiktok { background-color: #000000; }
+.facebook { background-color: #1877f2; }
+
+.seccion-mapa {
+    margin-top: 30px;
+}
+
+.caja-mapa {
+    background-color: #eaeded;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #555;
+    font-weight: bold;
+}
+/* Estilos para la galería dentro de la página de detalle */
+.seccion-galeria {
+    margin-top: 30px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.03);
+}
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #2c3e50; /* Un tono elegante y sobrio */
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-top: 3px solid #34495e;
+}
+
+.site-footer strong {
+    color: #3498db; /* Destacar mi nombre con un tono llamativo */
+}

@@ -1,16 +1,38 @@
-// Seleccionamos todos los botones de las tarjetas
 const botonesDetalle = document.querySelectorAll('.btn-ver-mas');
+const modal = document.getElementById('modal-detalle');
+const botonCerrar = document.getElementById('cerrar-modal');
+const modalTitulo = document.getElementById('modal-titulo');
+const modalRubro = document.getElementById('modal-rubro');
+const modalDireccion = document.getElementById('modal-direccion');
 
-// Recorremos cada botón para escuchar el evento "click"
+// Abrir el modal al hacer clic en "Ver detalles"
 botonesDetalle.forEach(boton => {
     boton.addEventListener('click', (evento) => {
-        // Buscamos la tarjeta padre del botón presionado
         const tarjeta = evento.target.closest('.tarjeta-tienda');
         
-        // Extraemos el nombre de la tienda dentro de esa tarjeta
-        const nombreTienda = tarjeta.querySelector('h3').textContent;
+        // Extraer la información de la tarjeta seleccionada
+        const nombre = tarjeta.querySelector('h3').textContent;
+        const rubro = tarjeta.querySelector('.rubro').textContent;
+        const direccion = tarjeta.querySelector('.direccion').textContent;
         
-        // Mostramos una alerta interactiva (luego la cambiaremos por una ventana más estilizada)
-        alert(`¡Pronto podrás ver toda la información detallada, horarios y el mapa de: ${nombreTienda}!`);
+        // Rellenar el modal con esos datos
+        modalTitulo.textContent = nombre;
+        modalRubro.textContent = rubro;
+        modalDireccion.textContent = direccion;
+        
+        // Mostrar el modal quitando la clase "oculto"
+        modal.classList.remove('oculto');
     });
+});
+
+// Cerrar el modal al hacer clic en la "X"
+botonCerrar.addEventListener('click', () => {
+    modal.classList.add('oculto');
+});
+
+// Cerrar el modal si hacen clic fuera de la caja blanca
+window.addEventListener('click', (evento) => {
+    if (evento.target === modal) {
+        modal.classList.add('oculto');
+    }
 });

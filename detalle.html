@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Tienda - Barrio de las Telas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="btn-volver">⬅ Volver al Directorio</a>
+        <h1 id="det-nombre">Nombre de la Tienda</h1>
+    </header>
+
+    <main class="contenedor-detalle">
+        <div class="info-principal">
+            <img id="det-imagen" src="" alt="Foto de la tienda">
+            <div class="datos-tienda">
+                <p id="det-rubro"><strong>Rubro:</strong> <span></span></p>
+                <p id="det-direccion"><strong>Dirección:</strong> <span></span></p>
+                <p id="det-descripcion"><strong>Descripción:</strong> <span></span></p>
+                
+                <h3>Contacto y Redes Sociales</h3>
+                <div class="redes-sociales">
+                    <a id="det-whatsapp" href="#" target="_blank" class="btn-social whatsapp">💬 WhatsApp</a>
+                    <a id="det-correo" href="#" class="btn-social correo">✉️ Correo</a>
+                    <a id="det-instagram" href="#" target="_blank" class="btn-social instagram">📸 Instagram</a>
+                    <a id="det-tiktok" href="#" target="_blank" class="btn-social tiktok">🎵 TikTok</a>
+                    <a id="det-facebook" href="#" target="_blank" class="btn-social facebook">📘 Facebook</a>
+                </div>
+            </div>
+        </div>
+        <!--sección de galería-->
+
+    <!-- Galería fotográfica exclusiva de la tienda -->
+        <section class="seccion-galeria">
+            <h3>Galería del Local</h3>
+            <div id="det-galeria-fotos" class="grid-galeria">
+                <!-- Las fotos se inyectan dinámicamente aquí -->
+            </div>
+        </section>
+
+<!-- SECCIÓN DE MAPA ÚNICO Y DINÁMICO -->
+<div class="seccion-mapa">
+    <!-- El título se rellenará solo desde JS con la dirección correcta -->
+    <h3 id="titulo-mapa">¿Cómo llegar?</h3> 
+    
+    <!-- Un único iframe preparado para recibir la URL dinámica -->
+    <iframe 
+        id="det-mapa-iframe"
+        src="" 
+        width="100%" 
+        height="250" 
+        style="border:0; border-radius: 8px;" 
+        loading="lazy">
+    </iframe>
+</div>
+
+    </main>
+
+    <script src="detalle.js"></script>
+</body>
+</html>

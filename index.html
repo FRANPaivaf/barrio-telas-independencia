@@ -15,35 +15,52 @@
 
     <main>
         <section id="contenedor-tiendas" class="galeria">
-            <!-- Aquí agregaremos las tarjetas de los locales comerciales -->
-        <section id="contenedor-tiendas" class="galeria">
     
-    <!-- Tarjeta 1 -->
-    <article class="tarjeta-tienda" data-id="1">
+    <!-- Tienda 1 -->
+    <article class="tarjeta-tienda">
         <img src="img/tienda1.jpg" alt="Local Telas Independencia">
         <div class="info-tarjeta">
             <h3>Telas La Elegancia</h3>
             <p class="rubro">Especialidad: Sedas y Lino</p>
             <p class="direccion">📍 Av. Independencia #1234</p>
-            <button class="btn-ver-mas">Ver detalles y mapa</button>
+            <!-- Enlace que redirige a la página de detalles pasando la tienda por la URL -->
+            <a href="detalle.html?tienda=telas-la-elegancia" class="btn-ver-mas">Ver detalles y mapa</a>
         </div>
     </article>
 
-    <!-- Tarjeta 2 -->
-    <article class="tarjeta-tienda" data-id="2">
+    <!-- Tienda 2 -->
+    <article class="tarjeta-tienda">
         <img src="img/tienda2.jpg" alt="Local Telas Importadas">
         <div class="info-tarjeta">
             <h3>El Rey del Algodón</h3>
             <p class="rubro">Especialidad: Algodón y Mezclilla</p>
             <p class="direccion">📍 Av. Independencia #1560</p>
-            <button class="btn-ver-mas">Ver detalles y mapa</button>
+            <a href="detalle.html?tienda=el-rey-del-algodon" class="btn-ver-mas">Ver detalles y mapa</a>
         </div>
     </article>
 
 </section>
-        
-        </section>
+      
     </main>
+<footer class="site-footer">
+        <p>Sitio web del Barrio de las Telas | Diseñado por <strong>Francisca Paiva</strong> © 2026</p>
+    </footer>
+    
+
+    <!-- Ventana Modal de Detalles -->
+<div id="modal-detalle" class="modal oculto">
+    <div class="modal-contenido">
+        <span id="cerrar-modal">&times;</span>
+        <h2 id="modal-titulo">Nombre de la Tienda</h2>
+        <p id="modal-rubro">Especialidad</p>
+        <p id="modal-direccion">Dirección</p>
+        
+        <!-- Simulación de Mapa -->
+        <div class="contenedor-mapa">
+            <p>📍 <em>Aquí cargará la referencia del mapa de ubicación en Independencia</em></p>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
